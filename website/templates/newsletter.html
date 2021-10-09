@@ -1,8 +1,5 @@
 {% extends 'base.html' %}
 {% load static  %}
-{% block title %}About Dr. Sarabpreet {% endblock %}
-{% block meta_description %}This is the website of Dr.Sarabpreet Bedi DMD the greatest dentist 
-who ever dentised! {% endblock %}
 
 {% block content %}
 
@@ -14,7 +11,7 @@ who ever dentised! {% endblock %}
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-12">
-          <h2 class="title">Contact</h2>
+          <h2 class="title">Newsletter</h2>
         </div>
       </div>
     </div>
@@ -35,9 +32,8 @@ who ever dentised! {% endblock %}
   </div>
   <!-- ***** Breadcrumb Area End ***** -->
   <center>
-   {% if message_name %}
-      <h2>Thanks {{ message_name }} !</h2> 
-      <p>We have received your email and will respond shorthly....</p>
+   {% if nl_email %}
+      <p>We sent out weekly newest article and some great offers to email {{ nl_email }} ....</p>
   </center>
   <br/><br/><br/>
   <!-- ***** Contact Area Start ***** -->
@@ -108,3 +104,4 @@ who ever dentised! {% endblock %}
   <!-- ***** Contact Area End ***** -->
 
  {% endblock %}
+

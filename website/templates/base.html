@@ -163,7 +163,6 @@
             </nav>
           </div>
         </div>
-
         <!-- Single Footer Widget -->
         <div class="col-12 col-sm-6 col-lg">
           <div class="single-footer-widget">
@@ -173,12 +172,13 @@
             <p>We will send out weekly newest article and some great offers</p>
             <!-- Newsletter Form -->
             <div class="footer-newsletter-form">
-              <form action="#" method="post">
+              <form action="{% url 'newsletter' %}" method="post">
+                    {% csrf_token %}
                 <input type="email" name="nl-email" value="" placeholder="Email Address">
                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
               </form>
             </div>
-
+             
             <!-- Social Info -->
             <div class="footer-social-info">
               <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
@@ -198,7 +198,7 @@
         <div class="col-12">
           <div class="copywrite-content">
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib --- Downloaded from <a href="https://themeslab.org/" target="_blank">Themeslab</a></a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> <i class="fa fa-heart-o" aria-hidden="true"> DENTO</i> </a></a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>

@@ -66,3 +66,25 @@ def appointment(request):
         
     else:
         return render(request, 'home.html', {})
+    
+    
+def newsletter(request):
+    if request.method == "POST":
+        
+        nl_email = request.POST['nl-email']
+        newsletter = "Weekly Newsletter sent to your email address."
+        
+        newsletter = "Weekly Newsletter Sent Demo"
+        send_mail(
+           'Weekly Newsletter Request',
+            newsletter,
+            nl_email,
+            ['bedisarabpreet@gmail.com'],
+            
+            )
+        
+        return render(request, 'newsletter.html', {'nl_email': nl_email
+                                                   })
+        
+    else:
+        return render(request, 'home.html', {})    
